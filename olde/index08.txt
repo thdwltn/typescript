@@ -1,0 +1,24 @@
+// let People = {
+//   name: 'kim',
+//   plus(x:number):number{
+//     return x + 1 
+//   },
+//   changeName: () => {
+//     console.log('welcome')
+//   }
+// }
+
+// console.log(People.plus(1));
+// People.changeName();
+
+type Sum = (a:string,b:number) => number
+
+// ()=> return 한줄 생략가능
+// function num (a:string,b:number):number{
+//   console.log(a)
+//   return b + 1
+// }
+let num: Sum = function (a,b){
+  console.log(a)
+  return b + 1
+}

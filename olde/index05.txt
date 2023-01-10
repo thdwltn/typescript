@@ -1,0 +1,26 @@
+let name4 : ('dog'|'cat');
+name4 = 'cat';
+
+let num5 : (0 | 1 | -1);
+num5 = 0;
+
+
+// 함수
+
+function main5(): 0 | 1 | -1 {
+  return 1;
+}
+
+// 객체
+let data = {
+  name : 'dog'
+} as const
+
+function fn1( a : 'dog'){
+
+}
+
+fn1(data.name) // 타입 틀려서 에러발생 as const 작성.
+
+// as const 
+

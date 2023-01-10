@@ -1,0 +1,28 @@
+let main : string = 'room'; // 생성자명(main) 중복 안되게 조심!!
+main = 'cat';
+console.log(main);  // 컴파일 js, browser에 연결
+// 여기서 체크하고 나가는 기능
+
+let num : number = 123;
+let bool : boolean = true;
+
+let people : string[] = ['kim','park'];
+let my : {age:number} = {age:20}
+let project :{
+  member: string[],
+  days: number,
+  start: boolean
+} = {
+  member:['people1','people2'],
+  days: 30,
+  start: true,
+}
+
+project.days = 30;
+project.start = true;
+project.member[0] = 'people1';
+project.member[1] = 'people2';
+
+console.log(project.days);
+console.log(project.start);
+console.log(project.member);

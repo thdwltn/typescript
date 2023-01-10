@@ -1,0 +1,17 @@
+//  if문
+function fn(x:number | string){
+  if(typeof x === 'number'){
+    return x + 1;
+  }
+  else{
+    return x + '1';
+  }
+}
+console.log(fn(3))
+
+//  as
+function fn1(x:number | string){
+  return (x as number) + 1;
+}
+console.log(fn1(123))
+console.log(fn1('123'))

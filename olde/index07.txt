@@ -1,0 +1,86 @@
+// interface -> type처럼 사용가능
+
+// type Square = {
+//   color:string,
+//   width:number
+// }
+interface Square{
+  color:string,
+  width:number
+}
+
+let rect : Square = {
+  color : 'red',
+  width : 100
+}
+
+
+// interface Student{
+//   name: string
+// }
+// interface Teacher{
+//   name: string,
+//   age: number
+// }
+
+interface Student{
+  name:string
+}
+interface Teacher extends Student{
+  age: number
+}
+
+interface Product{
+  brand:string;
+  serialNumber:number;
+  modla:string[];
+}
+
+let it:Product = {brand:'samsung',serialNumber: 1122 ,modla:['tv','phone']}
+console.log(it);
+
+
+interface Cart{
+  product:string,
+  price:number
+}
+
+let buket:Cart[] = [{product:'청소기',price:15000},{product:'주방기기',price:40000}]
+
+
+interface NewCart extends Cart{
+  cart:boolean
+}
+
+// 추가 extends newCart
+let buket2:NewCart = {product:'청소기',price:15000,cart:false}
+console.log(buket2);
+
+// interface 중복 => 문제되지 않음
+interface Animal {
+  name: string
+}
+interface Animal{
+  age: number
+}
+
+let myPet:Animal = {
+  name:'black',
+  age: 4
+}
+
+// type 중복 => 오류
+// type Animal2 = {
+//   name: string
+// }
+// type Animal2 = {
+//   age:5
+// }
+
+// interface Dog {
+//   name: string
+// }
+// interface Cat extends Dog{
+//   name: number
+// }
+

@@ -1,0 +1,28 @@
+function main (x:number):number{
+  return x * 2;
+}
+main(2)
+
+function main2(x:number):void{
+  // return x * 3;
+  console.log(x * 3);
+}
+main2(3)
+
+// 매개변수가 있을 때, 없을 때 => ?
+// number | undefined -> union타입 -> 변경
+function main3(x? :number){
+  return x;
+}
+main3(3)
+
+// 순서가 중요할 때 -> 꼭 설정 앞에서
+function main4(x:string, y? :number){
+  return y;
+}
+main3(3)
+
+function num(x : (number|string)){
+  return x;
+}
+num(1);

@@ -1,0 +1,40 @@
+// 타입변수 
+type Dog = string | number | undefined;
+let animal : Dog = 'black';
+animal = 123;
+console.log(animal);
+
+// readonly
+type City = {
+  readonly region: string
+}
+let etc : City = {region: 'seoul'};
+// etc.region = 'busan'; // error발생이유 : readonly 이기 때문.
+
+// 결합 가능
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = {x: number};
+type PositionY = {y: number};
+
+// {x: ,y: }
+type NewType = PositionX & PositionY
+let Position : NewType = {x:10, y:20};
+
+// type은 재할당 불가. 고치기 불가능
+
+type NewType1 = {
+  color?:string,
+  size: number,
+  readonly position: string | number[]; 
+}
+
+
+let num:NewType1 = {
+  size : 123,
+  position: [1,2,3]
+}
+
+console.log(num);

@@ -1,0 +1,48 @@
+// class
+
+// class Person {
+//   data = 0; 원시데이터 같은 경우, 데이터대로 type 변경되기 때문에 :number 생략가능.
+//   constructor(){}
+//   method(){}
+// }
+// class Person {
+//   data :number = 0;
+//   constructor(){}
+//   method(){}
+// }
+
+// let name2 = new Person();
+// console.log(name2.data);
+
+class People{
+  name;
+  age;
+  constructor(a='cat'){
+    this.name = a;
+    this.age = 3;
+  }
+}
+
+let source = new People('cat');
+console.log(source.name);
+
+
+
+
+class Car{
+  model:string;
+  price:number;
+  constructor(a:string,b:number){
+   this.model = a;
+   this.price = b;
+  } 
+  tax_():number{
+    return this.price * 0.1;
+  }
+}
+
+let myCar = new Car('red car',30000);
+
+console.log(myCar.model);
+console.log(myCar.price);
+console.log(myCar.tax_());
